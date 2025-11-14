@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
-  namespace: demo-$NAME
+  namespace: demo-eugene
   labels:
     app: frontend
 spec:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: $DOCKERUSER/lab-frontend:1.0
+          image: ugindev/lab-frontend:1.0
           ports:
             - containerPort: 80
           readinessProbe:
